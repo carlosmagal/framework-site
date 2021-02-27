@@ -1,0 +1,33 @@
+#card-toDos{
+    width: 324px;
+    height: 150px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    display: block;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+}
+
+.card-todos-id-check{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px;
+}
+.card-todos-id{
+    font-weight: 700;
+    font-size: 27px;
+    margin-top: 16px;
+
+}
+.card-todos-check{
+    margin-right: 5px;
+    margin-top: 16px;
+
+}
+
+.card-todos-text{
+    font-size: medium;
+    margin: 16px;
+}

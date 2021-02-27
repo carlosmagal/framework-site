@@ -1,0 +1,50 @@
+.todos-container{
+    display: flex;
+    flex-direction: column;
+}
+#todos-container-cards{
+    width: 1020px;
+    /* width: 95%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin: 0 auto;
+    margin-top: 200px;
+    animation: fadeCards 3s 0.8s both;
+}
+
+.container-pagination{
+    display: flex;
+    justify-content: center;
+    /* margin: 0 auto; */
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+@media screen and (max-width: 1000px) {
+    #todos-container-cards{
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #todos-container-cards{
+        flex-direction: column;
+        width: 370px;
+        margin-top: 200px;
+
+      /* width: 900px; */
+    }
+}
+
+@keyframes fadeCards{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
