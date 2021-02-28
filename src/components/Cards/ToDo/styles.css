@@ -1,6 +1,6 @@
 #card-toDos{
-    width: 324px;
-    height: 150px;
+    width: var(--todoscardsize);
+    /* height: 150px; */
     background: #EEEEEE;
     border-radius: 10px;
     display: block;
@@ -30,4 +30,10 @@
 .card-todos-text{
     font-size: medium;
     margin: 16px;
+}
+
+@media screen and (max-width: 700px) {
+    #card-toDos{
+        width: 300px;
+    }
 }

@@ -1,0 +1,30 @@
+#card-comments{
+    display: flex;
+    flex-direction: column;
+
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #D3D0D0;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.card-comments-name-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.card-comments-name{
+    font-weight: 500;
+}
+
+.card-comments-email{
+    color:#625D5D;
+}
+
+.card-comments-body{
+    margin: 5px;
+}

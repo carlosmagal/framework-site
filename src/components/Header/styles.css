@@ -91,7 +91,8 @@ header {
     font-size: 21px;
     font-weight: 700;
     margin-left: 5px;
-    border-bottom: 4px solid rgb(255, 255, 255);
+    cursor: pointer;
+    border-bottom: 3px solid rgb(255, 255, 255);
 }
 @media screen and (max-width: 700px) {
 
@@ -115,7 +116,6 @@ header {
 }
 @media screen and (max-width: 540px) {
     
-
 	.label-title {
 		font-size: 19px;
 	}
@@ -124,12 +124,22 @@ header {
 		font-size: 23px;
 	}
 
-    
+    .label-container {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 10px 0;
+        font-size: 18px;
+        border-bottom: 1px solid rgb(167, 166, 195);
+    }
+
+    .label-title-clicked {
+        border-bottom: none;
+    }
 }
   
-.label-icon{
-    fill: currentColor;
-}
+/* .label-icon{
+} */
   
 #menu-button {
 	color: white;

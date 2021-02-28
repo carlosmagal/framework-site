@@ -4,7 +4,7 @@ import check from '../../../assets/icons/check.svg'
 import x from '../../../assets/icons/x.svg'
 import './styles.css'
 
-const toDoCard = ({id, title, completed}) =>{
+const ToDoCard = ({id, title, completed}) =>{
 
 
     return(
@@ -20,4 +20,4 @@ const toDoCard = ({id, title, completed}) =>{
         </div>
     )
 }
-export default toDoCard
+export default ToDoCard

@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import Pagination from '@material-ui/lab/Pagination'
 
-import Card from '../../components/Cards/ToDo/index'
+import Card from '../../components/Cards/Post/index'
 
 import api from '../../services/api'
 import './styles.css'
 
-const ToDos = ()=> {
+const Posts = ()=> {
 
     const[items, setItems] = useState([])
     const[currentPage, setCurrentPage] = useState(1)
@@ -16,13 +16,13 @@ const ToDos = ()=> {
     const pages = 10
     const getItems = useCallback( async() => {
 
-        await api.get(`/todos?userId=${currentPage}`)
+        await api.get(`/posts?userId=${currentPage}`)
         .then(response=>{
             setItems(response.data)
             setDisable(false)
             setShowPagination(true)
-
-            // console.log(response)
+            
+            console.log(response)
         }).catch(error=>{
 
         })
@@ -34,11 +34,11 @@ const ToDos = ()=> {
     },[currentPage, getItems])
 
     return (
-        <div className='todos-container'>
-            <div id='todos-container-cards'>
+        <div className='posts-container'>
+            <div id='posts-container-cards'>
                 {items ? 
                     items.map((item)=>(
-                        <Card key={item.id} completed={item.completed} title={item.title} id={item.id}/>
+                        <Card key={item.id} body={item.body} title={item.title} id={item.id}/>
                         )
                     )
                     :
@@ -72,4 +72,4 @@ const ToDos = ()=> {
     )
 }
 
-export default ToDos
+export default Posts

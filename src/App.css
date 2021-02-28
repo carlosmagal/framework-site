@@ -8,10 +8,16 @@
 }
 
 body{
-    background-color: #22142B;
+    background-color: #603474;
 }
 
 .app{
     background-color: #22142B;
     height: 100%;
+}
+
+:root{
+    --todoscardsize: 250px;
+    --albunscardsize: 400px;
+    --postscardsize: 500px;
 }
