@@ -8,7 +8,7 @@ import Capacete from '../../assets/icons/Header/capacete.svg'
 import Ship  from '../../assets/icons/Header/ship.svg'
 import logo from '../../assets/frwk-logo.png'
 
-import './styles.css';
+import './styles.css'
 
 const HeaderLink = ({ onClick, title, pathname, Icon }) => {
 
@@ -27,9 +27,9 @@ const HeaderLink = ({ onClick, title, pathname, Icon }) => {
 }
 
 function Header(){
-    const [{ width }, setDimension] = useState({ width: window.innerWidth, height: window.innerHeight });
-    const [dropMenuOpen, setDropMenuOpen] = useState(false);
-    const [curCallout, setCurCallout] = useState(0);
+    const [{ width }, setDimension] = useState({ width: window.innerWidth, height: window.innerHeight })
+    const [dropMenuOpen, setDropMenuOpen] = useState(false)
+    const [curCallout, setCurCallout] = useState(0)
     const history = useHistory()
 
     const handlePageLoad = (pathnamme) =>{
@@ -44,7 +44,14 @@ function Header(){
         let idName
 
         if(window.location.pathname === '/'){
+            
+            if(dropMenuOpen)
+                document.getElementById('home').style.marginTop = '0px'
+            else
+                document.getElementById('home').style.marginTop = '220px'
+
             setDropMenuOpen(!dropMenuOpen)
+
             return
         }
 
@@ -64,21 +71,21 @@ function Header(){
     }
    
     const updateWindowDimensions = () => {
-        setDimension({ width: window.innerWidth, height: window.innerHeight });
+        setDimension({ width: window.innerWidth, height: window.innerHeight })
     }
 
     useEffect(() => {
-        window.addEventListener('resize', updateWindowDimensions);
-        return () => window.removeEventListener('resize', updateWindowDimensions);
+        window.addEventListener('resize', updateWindowDimensions)
+        return () => window.removeEventListener('resize', updateWindowDimensions)
     }, [])
 
     useEffect(() => {
         if(width > 700 && dropMenuOpen) {
-            setDropMenuOpen(false);
+            setDropMenuOpen(false)
         } else if(width < 700 && curCallout) {
-            setCurCallout(0);
+            setCurCallout(0)
         }
-    }, [width, dropMenuOpen, curCallout]);
+    }, [width, dropMenuOpen, curCallout])
 
     
     return (
@@ -92,7 +99,7 @@ function Header(){
                 <div className='right-content'>
                     {width > 700 ? // pc
                         <>
-                            <HeaderLink Icon={Ship} pathname='/' title='Menu' onClick={() => handlePageLoad('/')}/>
+                            <HeaderLink Icon={Ship} pathname='/' title='Home' onClick={() => handlePageLoad('/')}/>
                             <HeaderLink Icon={Darth} pathname='/albuns' title='Álbuns' onClick={() => handlePageLoad('/albuns')}/>
                             <HeaderLink Icon={Capacete} pathname='/posts' title='Postagens' onClick={() => handlePageLoad('/posts')}/>
                             <HeaderLink Icon={Espada} pathname='/to-dos' title='To-Dos' onClick={() => handlePageLoad('/to-dos')}/>
@@ -113,7 +120,7 @@ function Header(){
                 id='menu'
                 className= {dropMenuOpen ? 'menu-open' : 'menu-closed'}
             >
-                <HeaderLink Icon={Ship} pathname='/' title='Menu' onClick={() => handlePageLoad('/')}/>
+                <HeaderLink Icon={Ship} pathname='/' title='Home' onClick={() => handlePageLoad('/')}/>
                 <HeaderLink Icon={Darth} pathname='/albuns' title='Álbuns' onClick={() => handlePageLoad('/albuns')}/>
                 <HeaderLink Icon={Capacete} pathname='/posts' title='Postagens' onClick={() => handlePageLoad('/posts')}/>
                 <HeaderLink Icon={Espada} pathname='/to-dos' title='To-Dos' onClick={() => handlePageLoad('/to-dos')}/>

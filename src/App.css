@@ -3,7 +3,8 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: Roboto;
+    /* font-family: Roboto; */
+    font-family: 'Poppins';
     scroll-behavior: smooth;
 }
 
@@ -12,7 +13,7 @@ body{
 }
 
 .app{
-    background-color: #22142B;
+    /* background-color: #22142B; */
     height: 100%;
 }
 

@@ -13,7 +13,6 @@ header {
     justify-content: flex-start;
     /* box-shadow: 0 0 7px 0 black; */
     padding: 0 20px;
-    font-weight: 300;
 }
   
 #boximg{
@@ -23,26 +22,6 @@ header {
 #boximg img{
     width: 180px;
     /* height: 40px; */
-}
-  
-#geral .titulo{
-    flex-direction: column;
-}
-  
-#geral .titulo .titulo1{
-    font-weight: 400;
-  
-    font-size: 16px;
-    color:rgb(167, 166, 195);
-    margin: 0;
-}
-  
-#geral .titulo .titulo2{
-    font-weight: 400;
-  
-    font-size: 16px;
-    color: #F89797;
-    margin: 0;
 }
   
 .left-content {
@@ -76,23 +55,23 @@ header {
   
 .label-container:hover, .label-title:hover, #menu-button:hover {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 500;
 }
   
 .label-title {
-    font-size: 18px;
-    font-weight: 500;
+    /* font-size: 18px; */
+    font-weight: 300;
     margin-left: 5px;
     color: currentColor; /* Cor do container muda com o hover */
 }
 
 .label-title-clicked {
     /* transition: 2s; */
-    font-size: 21px;
-    font-weight: 700;
+    /* font-size: 19px; */
+    font-weight: 500;
     margin-left: 5px;
     cursor: pointer;
-    border-bottom: 3px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 @media screen and (max-width: 700px) {
 

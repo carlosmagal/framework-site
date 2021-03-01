@@ -22,7 +22,7 @@ const Posts = ()=> {
             setDisable(false)
             setShowPagination(true)
             
-            console.log(response)
+            // console.log(response)
         }).catch(error=>{
 
         })
