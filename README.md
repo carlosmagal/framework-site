@@ -2,7 +2,7 @@
 
 ## Carlos Magalhães Silva
 
-Na implementação das telas a linguagem foi utilizado ReactJS. Para instalar os módulos necessários para a execução do programa:
+Na implementação das telas a linguagem utilizada foi ReactJS. Para instalar os módulos necessários para a execução do programa:
 
 ```
 $ yarn install
